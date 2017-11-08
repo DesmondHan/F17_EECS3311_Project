@@ -1,0 +1,52 @@
+-- The abstract user interface of the analyzer for an expression language.
+-- This analyzer supports three processing functions:
+-- 1. Pretty Printing
+-- 2. Type Checking
+-- 3. Evaluation 
+
+system analyzer
+
+-- Events of users requesting for processing the expression (entered so far)
+type_check
+evaluate 
+reset
+
+-- Events of users adding constants
+boolean_constant (c: BOOLEAN)
+integer_constant (c: INTEGER)
+
+-- Events of users adding binary arithmetic operations
+add
+subtract
+multiply 
+divide
+
+-- Events of users adding binary logical operations
+conjoin
+disjoin
+imply 
+
+-- Events of users adding binary relational operations
+equals
+greater_than
+less_than
+
+-- Events of users adding binary set operations
+union
+intersect
+difference
+
+-- Events of users adding unary arithmetic operations
+negative
+
+-- Events of users adding unary logical operations
+negation
+
+-- Events of users adding unary composite operations
+sum
+for_all
+there_exists
+
+-- Events of users starting/finishing entering set enumerations 
+open_set_enumeration
+close_set_enumeration
